@@ -126,6 +126,34 @@ html[dir="rtl"] .arrow-forward { transform: scaleX(-1); }
 }
 html[dir="rtl"] .nav-links a:not(.nav-cta)::after { transform-origin: right; }
 .nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
+.nav-links a.nav-current {
+    color: var(--red);
+    font-weight: 700;
+}
+.nav-links a.nav-current::after {
+    transform: scaleX(1);
+    background: var(--red);
+}
+.mobile-sub-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 0 4px;
+    margin: 6px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+.mobile-sub-nav a {
+    color: var(--muted) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    padding: 4px 0 !important;
+    border: none !important;
+}
+.mobile-menu a.nav-current {
+    color: var(--red) !important;
+    font-weight: 700 !important;
+}
 
 .nav-cta {
     display: inline-flex; align-items: center; gap: 8px;
