@@ -123,7 +123,22 @@ function applyLanguage(lang) {
     });
 
     localStorage.setItem(STORAGE_KEY, lang);
+    updateLangButtons(lang);
 }
+
+function updateLangButtons(lang) {
+    document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+        btn.textContent = lang === 'he' ? 'EN' : 'עברית';
+    });
+}
+
+document.querySelectorAll('.lang-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-lang') || 'he';
+        applyLanguage(current === 'he' ? 'en' : 'he');
+        closeMobile();
+    });
+});
 
 const initialLang = getStoredLang();
 applyLanguage(initialLang);
