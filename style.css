@@ -817,6 +817,18 @@ section { padding: 110px 0; position: relative; }
     transform: translateY(-2px);
     box-shadow: 0 16px 40px rgba(37, 211, 102, 0.5);
 }
+/* secondary card action (apply), under the main "reserve for the next race" button */
+.signature-cta.signature-cta-alt {
+    background: #fff;
+    color: #128c4a;
+    border: 2px solid #25D366;
+    box-shadow: none;
+    padding: 14px 24px;
+}
+.signature-cta.signature-cta-alt:hover {
+    background: rgba(37, 211, 102, 0.08);
+    box-shadow: none;
+}
 
 .packages-disclaimer {
     text-align: center;
